@@ -1,11 +1,11 @@
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3000;
+const http = require('http');
+const PORT = 80;
 
-app.get("/", (req, res) => {
-  res.send("Hello from the app!");
+const server = http.createServer((req, res) => {
+  res.end("✅ Hello from CodeDeploy on port 80!");
 });
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}`);
+server.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
+
